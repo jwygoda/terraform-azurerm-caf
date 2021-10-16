@@ -56,7 +56,6 @@ module "mssql_mi_failover_groups" {
 module "mssql_mi_administrators" {
   source = "./modules/databases/mssql_managed_instance/administrator"
 
-  depends_on = [module.azuread_roles_sql_mi, module.azuread_roles_sql_mi_secondary]
   for_each   = local.database.mssql_mi_administrators
 
   resource_group_name = local.combined_objects_resource_groups[try(each.value.lz_key, local.client_config.landingzone_key)][each.value.resource_group_key].name
