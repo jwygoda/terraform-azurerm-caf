@@ -1,6 +1,11 @@
 # Upgrade notes
 
 When upgrading to a newer version of the CAF module, some configuration structures must be updated before applying the modifications.
+## 5.4.5
+
+Upgrade to 5.4.5 includes support azurerm 2.81.0 provider and implements the following changes:
+
+- Deprecation of client_affinity_enabled attribute for the azurerm_function_app object. This option is nolonger configurable and the property is commented in the code.
 
 ## 5.4.4
 
